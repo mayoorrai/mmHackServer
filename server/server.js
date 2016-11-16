@@ -4,6 +4,8 @@ var express = require('express'),
     path = require('path'),
     request = require('request');
 
+var calculator = require('./calculator');
+
 // send index.html page to user upon hitting the home page
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
@@ -86,6 +88,10 @@ mainRouter.get('/:asset1/:asset2', function(req, res) {
                request(options, function (error, response, body) {
                    if (!error && response.statusCode == 200) {
                        //console.log(response);
+                       
+                       // send to calculator function...
+                       calculator.calculatePower(body);
+                       
                        res.send(body);
 
                    }
