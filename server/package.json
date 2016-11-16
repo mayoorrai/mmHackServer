@@ -1,0 +1,17 @@
+{
+  "name": "irfr-poc",
+  "version": "1.0.0",
+  "description": "iRFR POC server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Mayoor Rai",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.6.4",
+    "passport": "^0.3.2"
+  }
+}
